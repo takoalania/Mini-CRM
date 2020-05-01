@@ -5,7 +5,7 @@ $red: #db2828;
   src: url('/assets/fonts/bpg_arial_2009.ttf');
 }
 
-html, body {
+html, body, h1, h2, h3, h4, h5 {
   font-family: bpg_arial;
 }
 
@@ -37,7 +37,7 @@ input.ng-touched.ng-invalid, select.ng-touched.ng-invalid {
   border-radius: 4px 4px 0 0;
   border: 1px solid rgb(214, 214, 214);
   border-bottom: none;
-  padding: 10px;
+  padding: 1em;
   box-shadow: rgba(0, 0, 0, 0.098) 0px 3px 5px;
   font-weight: bold;
 }
