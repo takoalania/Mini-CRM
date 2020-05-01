@@ -5,13 +5,13 @@ import { ShellComponent } from './shell/shell.component';
 
 const routes: Routes = [
     {
-        path: '',
-        pathMatch: 'full',
-        component: ShellComponent
-    },
-    {
         path: 'auth',
         component: AuthComponent
+    },
+    {
+        path: '',
+        component: ShellComponent,
+        children: []
     }
 ];
 
