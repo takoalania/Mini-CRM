@@ -1,0 +1,84 @@
+.ui.segment {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.098) 0 3px 5px;
+}
+
+.ui.segments {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.098) 0 3px 5px;
+}
+
+.table-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid rgb(214, 214, 214);
+  border-bottom: none;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.098) 0px 3px 5px;
+  font-weight: bold;
+}
+
+table {
+  position: relative;
+  border-collapse: collapse;
+  width: 100% !important;
+  border-radius: 0 0 4px 4px;
+  box-shadow: rgba(0, 0, 0, 0.098) 0px 3px 5px;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 0 0 4px 4px;
+    pointer-events: none;
+  }
+
+  thead {
+    border-collapse: collapse;
+    background-color: rgb(235, 235, 235);
+  }
+
+  tbody {
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border-right: 1px solid rgb(214, 214, 214);
+    border-bottom: 1px solid rgb(214, 214, 214);
+    padding: 10px;
+    text-align: center;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  tr:last-child td, thead:last-child th {
+    border-bottom: none;
+  }
+
+  .trash.icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    transition: background-color .5s;
+    color: #ADADAD;
+
+    &:hover {
+      background-color: rgba(235, 235, 235, 1);
+      cursor: pointer;
+    }
+  }
+}
