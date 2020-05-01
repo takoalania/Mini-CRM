@@ -4,14 +4,20 @@ input.ng-touched.ng-invalid, select.ng-touched.ng-invalid {
   border-color: $red !important;
 }
 
-.ui.segment:not(.bordered) {
-  border: none;
+.ui.segment {
   box-shadow: rgba(0, 0, 0, 0.098) 0 3px 5px;
+
+  &:not(.bordered) {
+    border: none;
+  }
 }
 
-.ui.segments:not(.bordered) {
-  border: none;
+.ui.segments {
   box-shadow: rgba(0, 0, 0, 0.098) 0 3px 5px;
+
+  &:not(.bordered) {
+    border: none;
+  }
 }
 
 .table-header {
