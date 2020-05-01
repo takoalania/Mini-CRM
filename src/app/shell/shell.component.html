@@ -1,48 +1,48 @@
 <div class="shell">
-    <div class="shell__header">
-        <a href="/" class="shell__header__logo">
-            <img src="/assets/images/logo.svg" alt="logo">
+  <div class="shell__header">
+    <a href="/" class="shell__header__logo">
+      <img src="/assets/images/logo.svg" alt="logo">
+    </a>
+    <div class="shell__header__left-panel">
+      <div class="ui left circular icon input shell__header__left-panel__search">
+        <input type="text">
+        <i class="search icon"></i>
+      </div>
+      <div class="ui basic circular icon button">
+        <i class="film icon"></i>
+      </div>
+      <div class="ui basic circular icon button">
+        <i class="envelope icon"></i>
+      </div>
+      <div class="ui basic circular icon button">
+        <i class="bell icon"></i>
+      </div>
+      <div class="ui basic circular icon button">
+        <i class="bars icon"></i>
+      </div>
+      <div class="ui basic circular icon button">
+        <i class="user icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="shell__left-sidebar">
+    <div class="shell__left-sidebar__user-section">
+      <!-- TODO: Show User's name and picture here -->
+    </div>
+    <ul class="shell__left-sidebar__pages-section">
+      <li>
+        <a href="#">
+          <i class="home icon"></i>
+          <span>მთავარი</span>
         </a>
-        <div class="shell__header__left-panel">
-            <div class="ui left circular icon input shell__header__left-panel__search">
-                <input type="text">
-                <i class="search icon"></i>
-            </div>
-            <div class="ui basic circular icon button">
-                <i class="film icon"></i>
-            </div>
-            <div class="ui basic circular icon button">
-                <i class="envelope icon"></i>
-            </div>
-            <div class="ui basic circular icon button">
-                <i class="bell icon"></i>
-            </div>
-            <div class="ui basic circular icon button">
-                <i class="bars icon"></i>
-            </div>
-            <div class="ui basic circular icon button">
-                <i class="user icon"></i>
-            </div>
-        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="shell__content">
+    <div class="ui container">
+      <div class="shell__content__operation-date">საოპერაციო თარიღი: {{ curDate }}<hr></div>
+      <!-- TODO: Show client header here when client is chosen -->
+      <router-outlet></router-outlet>
     </div>
-    <div class="shell__left-sidebar">
-        <div class="shell__left-sidebar__user-section">
-          <!-- TODO: Show User's name and picture here -->
-        </div>
-        <ul class="shell__left-sidebar__pages-section">
-            <li>
-                <a href="#">
-                    <i class="home icon"></i>
-                    <span>მთავარი</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="shell__content">
-        <div class="ui container">
-            <div class="shell__content__operation-date">საოპერაციო თარიღი: {{ curDate }}<hr></div>
-            <!-- TODO: Show client header here when client is chosen -->
-            <router-outlet></router-outlet>
-        </div>
-    </div>
+  </div>
 </div>

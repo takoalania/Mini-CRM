@@ -4,20 +4,20 @@ import { AuthComponent } from './auth/auth.component';
 import { ShellComponent } from './shell/shell.component';
 
 const routes: Routes = [
-    {
-        path: 'auth',
-        component: AuthComponent
-    },
-    {
-        path: '',
-        component: ShellComponent,
-        children: []
-    }
+  {
+    path: 'auth',
+    component: AuthComponent
+  },
+  {
+    path: '',
+    component: ShellComponent,
+    children: []
+  }
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {
 }
