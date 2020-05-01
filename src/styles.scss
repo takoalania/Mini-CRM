@@ -1,3 +1,9 @@
+$red: #db2828;
+
+input.ng-touched.ng-invalid {
+  border-color: $red !important;
+}
+
 .ui.segment {
   border: none;
   box-shadow: rgba(0, 0, 0, 0.098) 0 3px 5px;
@@ -73,12 +79,13 @@ table {
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    transition: background-color .5s;
+    transition: background-color .5s, color .5s;
     color: #ADADAD;
 
     &:hover {
       background-color: rgba(235, 235, 235, 1);
       cursor: pointer;
+      color: #db2828;
     }
   }
 }
