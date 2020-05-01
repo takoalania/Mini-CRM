@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "bg",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -126,6 +126,7 @@
   "schematics": {
     "@schematics/angular:component": {
       "style": "scss",
+      "prefix": "bg",
       "skipTests": true
     }
   }
