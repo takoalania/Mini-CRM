@@ -1,0 +1,26 @@
+.auth {
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/hq-bg.png');
+    background-size: cover;
+
+    &__background-pattern {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url('/assets/images/pttrn.png');
+    }
+
+    &__form-column {
+        width: 480px;
+        background-color: #ECF0F1;
+        float: right;
+        padding: 22px;
+        height: 100%;
+        position: relative;
+    }
+
+    .ui.form {
+        top: 20px;
+    }
+}
