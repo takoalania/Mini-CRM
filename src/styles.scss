@@ -1,5 +1,14 @@
 $red: #db2828;
 
+@font-face {
+  font-family: bpg_arial;
+  src: url('/assets/fonts/bpg_arial_2009.ttf');
+}
+
+html, body {
+  font-family: bpg_arial;
+}
+
 input.ng-touched.ng-invalid, select.ng-touched.ng-invalid {
   border-color: $red !important;
 }
