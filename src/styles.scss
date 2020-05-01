@@ -1,6 +1,6 @@
 $red: #db2828;
 
-input.ng-touched.ng-invalid {
+input.ng-touched.ng-invalid, select.ng-touched.ng-invalid {
   border-color: $red !important;
 }
 
