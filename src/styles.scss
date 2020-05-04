@@ -55,6 +55,13 @@ input.ng-touched.ng-invalid, select.ng-touched.ng-invalid {
   }
 }
 
+.ui.card {
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+}
+
 
 .ui.segment {
   box-shadow: rgba(0, 0, 0, 0.098) 0 3px 5px;
