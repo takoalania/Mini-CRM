@@ -12,8 +12,11 @@ h1,
 h2,
 h3,
 h4,
-h5 {
-  font-family: bpg_arial;
+h5,
+button,
+div,
+p {
+  font-family: bpg_arial !important;
 }
 
 input.ng-touched.ng-invalid,
@@ -32,7 +35,9 @@ select.ng-touched.ng-invalid {
 .ui.form input[type="tel"]:focus,
 .ui.form input[type="text"]:focus,
 .ui.form input[type="time"]:focus,
-.ui.form input[type="url"]:focus {
+.ui.form input[type="url"]:focus,
+.ui.input.focus > input,
+.ui.input > input:focus {
   border-color: $primary;
 }
 
@@ -177,5 +182,10 @@ table {
       cursor: pointer;
       color: #db2828;
     }
+  }
+
+  & > div,
+  & > p {
+    padding: 20px;
   }
 }
