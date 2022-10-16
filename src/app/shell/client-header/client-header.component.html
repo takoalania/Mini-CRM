@@ -1,0 +1,30 @@
+<div class="ui segment client-header" *ngIf="clientData">
+  <div class="ui segment header-container">
+    <img class="ui small image" src="{{clientData.image}}">
+    <div class="client-info">
+      <div class="top-container">
+        <div>
+          <p class="name">{{clientData.firstName}} {{clientData.lastName}}</p>
+        </div>
+        <div>
+          <div>
+            <p class="title">აქტივები:
+              <span class="sum-amount">{{clientData.sumAmount | number: '1.2-2'}} </span>
+              <span class="value">GEL</span>
+            </p>
+            <p class="title">Plus: <span class="value">{{clientData.plusPoints}}</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-container">
+        <p class="title">უნიკალური: <span class="value">{{clientData.clientKey}}</span></p>
+        <button class="ui red button" (click)="onLogout()">გასვლა</button>
+      </div>
+    </div>
+  </div>
+  <div class="ui horizontal segments navigation">
+    <a routerlinkactive="active" routerlink="/krn" class="ui segment page-link" href="/krn">მთავარი</a>
+    <a routerlinkactive="active" routerlink="/krn/accounts" class="ui segment page-link" href="/krn/accounts">ანგარიშები</a>
+    <a routerlinkactive="active" routerlink="/krn/operations" class="ui segment page-link" href="/krn/operations">ოპერაციები</a>
+  </div>
+</div>

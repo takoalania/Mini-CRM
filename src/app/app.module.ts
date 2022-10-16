@@ -1,28 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AuthComponent } from './auth/auth.component';
-import { ShellComponent } from './shell/shell.component';
-import { ShellHeaderComponent } from './shell/shell-header/shell-header.component';
-import { ShellSidebarComponent } from './shell/shell-sidebar/shell-sidebar.component';
+import { AuthModule } from './auth/auth.module';
+import { ShellModule } from './shell/shell.module';
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AuthComponent,
-    ShellComponent,
-    ShellHeaderComponent,
-    ShellSidebarComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    FormsModule,
-    AppRoutingModule
+    SharedModule,
+    HttpClientModule,
+    AppRoutingModule,
+    ShellModule,
+    AuthModule,
+    CoreModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

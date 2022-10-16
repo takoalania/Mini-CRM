@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import {Client} from './modules/bpm/client.model';
 
 @Component({
   selector: 'bg-shell',

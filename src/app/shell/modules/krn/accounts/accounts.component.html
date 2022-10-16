@@ -1,0 +1,28 @@
+<div class="ui segment">
+  <div class="table-header">
+    <span>ანგარიშები</span>
+    <button routerLink="create" routerLinkActive="active" class="ui icon button"><i class="plus icon"></i></button>
+  </div>
+  <table>
+    <thead *ngIf="accounts.length && !isLoading">
+    <th>მფლობელი</th>
+    <th>სახელი</th>
+    <th>თანხა</th>
+    <th> </th>
+    </thead>
+    <tbody>
+      <tbody *ngIf="accounts.length && !isLoading">
+        <tr *ngFor="let account of accounts">
+          <td>{{ account.clientFirstName }} {{ account.clientLastName }}</td>
+          <td>{{ account.accountName }}</td>
+          <td>{{ account.amount | number: '1.2-2'}}</td>
+      <td>
+        <button class="ui icon button" (click)="onDeleteAccounts(account.accountKey)">
+          <i class="trash icon"></i>
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

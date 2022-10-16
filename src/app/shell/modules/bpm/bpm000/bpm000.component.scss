@@ -1,0 +1,41 @@
+.search-button {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid #d6d6d6;
+  padding: 1em;
+  font-weight: 700;
+}
+
+.table-header, table {
+  position: relative;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 10%);
+}
+
+table thead {
+  background-color: #ebebeb;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+}
+
+table td, table th {
+  border-right: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+  padding: 10px;
+  text-align: center;
+}
+
+tr:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,39 @@
+<form class="ui form" [formGroup]="form" (ngSubmit)="onTransfer()">
+  <div class="ui segment"><h1>ანგარიშის შექმნა</h1></div>
+  <div class="ui segment">
+    <div class="field">
+      <label>საიდან</label>
+      <select id="senderAccount" formControlName="senderAccount">
+        <option>აირჩიეთ</option>
+        <option *ngFor="let senderAccount of senderAccounts" [ngValue]="senderAccount.accountKey">
+          {{ senderAccount.accountKey }} - {{senderAccount.amount}}GEL ({{senderAccount.accountName}})
+        </option>
+      </select>
+      <ng-container *ngIf="get('senderAccount').invalid && get('senderAccount').touched">
+        <p class="error" *ngFor="let error of errors('senderAccount')">{{ error }}</p>
+      </ng-container>
+    </div>
+    <div class="field">
+      <label>სად</label>
+      <select id="receiverAccount" formControlName="receiverAccount">
+        <option>აირჩიეთ</option>
+        <option *ngFor="let receiverAccount of receiverAccounts" [ngValue]="receiverAccount.accountKey">
+          {{ receiverAccount.accountKey }} - {{receiverAccount.amount}}GEL ({{receiverAccount.accountName}})
+        </option>
+      </select>
+      <ng-container *ngIf="get('receiverAccount').invalid && get('receiverAccount').touched">
+        <p class="error" *ngFor="let error of errors('receiverAccount')">{{ error }}</p>
+      </ng-container>
+    </div>
+    <div class="field">
+      <label>თანხა</label>
+      <input type="number" formControlName="amount" min="0">
+      <ng-container *ngIf="get('amount').invalid && get('amount').touched">
+        <p class="error" *ngFor="let error of errors('amount')">{{ error }}</p>
+      </ng-container>
+    </div>
+  </div>
+  <button class="ui orange button" type="submit">გადარიცხვა</button>
+</form>
+
+<bg-alert [error]="error" *ngIf="error" (closeClick)="error = undefined"></bg-alert>

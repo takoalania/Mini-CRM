@@ -1,0 +1,56 @@
+.client-header:last-child, .client-header:first-child {
+  margin-bottom: 20px;
+}
+
+.header-container {
+  display: flex;
+}
+
+.client-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.title {
+  color: gray;
+}
+
+.value, .name {
+  color: black;
+  font-weight: bold;
+}
+
+.sum-amount {
+  color: #1abe6c;
+  font-weight: bold;
+}
+
+.client-navigation {
+  margin-top: 0;
+}
+
+.ui.segments.navigation .page-link {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: inherit;
+  transition: background-color .2s;
+}
+
+.ui.segments.navigation .page-link.active {
+  background-color: #ebebeb;
+}

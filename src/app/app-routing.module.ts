@@ -1,23 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthComponent } from './auth/auth.component';
-import { ShellComponent } from './shell/shell.component';
+import { AppPreloadingService } from './app-preloading.service';
 
-const routes: Routes = [
-  {
-    path: 'auth',
-    component: AuthComponent
-  },
-  {
-    path: '',
-    component: ShellComponent,
-    children: []
-  }
-];
+const routes: Routes = [];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, { preloadingStrategy: AppPreloadingService }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

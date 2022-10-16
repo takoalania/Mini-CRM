@@ -1,0 +1,28 @@
+<form class="ui form" [formGroup]="form" (ngSubmit)="onSaveClient()">
+  <div class="ui segment"><h1>კლიენტის რეგისტრაცია</h1></div>
+  <div class="ui segment">
+    <div class="field">
+      <label>სახელი</label>
+      <input type="text" formControlName="firstName">
+      <ng-container *ngIf="get('firstName').invalid && get('firstName').touched">
+        <p class="error" *ngFor="let error of errors('firstName')">{{ error }}</p>
+      </ng-container>
+    </div>
+    <div class="field">
+      <label>გვარი</label>
+      <input type="text" formControlName="lastName">
+      <ng-container *ngIf="get('lastName').invalid && get('lastName').touched">
+        <p class="error" *ngFor="let error of errors('lastName')">{{ error }}</p>
+      </ng-container>
+    </div>
+    <div class="field">
+      <label>Plus ქულები</label>
+      <input type="number" formControlName="plusPoints" min="0">
+      <ng-container *ngIf="get('plusPoints').invalid && get('plusPoints').touched">
+        <p class="error" *ngFor="let error of errors('plusPoints')">{{ error }}</p>
+      </ng-container>
+    </div>
+  </div>
+  <button class="ui orange button" type="submit">შენახვა</button>
+</form>
+
