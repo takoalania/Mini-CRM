@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, ComponentFactoryResolver, OnInit, ViewChild} from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
 import { Validators } from 'src/app/shared/validators';
@@ -20,7 +20,9 @@ export class RegisterComponent implements OnInit {
 
   @ViewChild(PlaceholderDirective) alertPlaceholder: PlaceholderDirective;
 
-  constructor(private authService: AuthService,   private router: Router) {}
+  constructor(private authService: AuthService,
+              private router: Router,
+              private cfr: ComponentFactoryResolver) {}
 
   ngOnInit() {
     this.initForm();
