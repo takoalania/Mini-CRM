@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider ng build",
     "build:win": "set NODE_OPTIONS=--openssl-legacy-provider && ng build",
     "test": "ng test",
     "lint": "ng lint",
